@@ -1,0 +1,11 @@
+services:
+  alice:
+    build: ./alice
+    ports:
+      - '8080:8080'
+    links:
+      - bob:bobhost
+  bob:
+    build: ./bob
+    ports:
+      - '8081:8081'

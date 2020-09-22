@@ -9,6 +9,6 @@ public class AliceApi {
     private RestTemplate restTemplate = new RestTemplate();
     @GetMapping("/hello")
     public String getHelloFromBob() {
-        return restTemplate.getForObject("http://localhost:8081/hello", String.class);
+        return restTemplate.getForObject("http://bobhost:8081/hello", String.class);
     }
 }
